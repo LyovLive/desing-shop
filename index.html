@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="website design, logo design, discord servers, custom websites, web development, graphic design,LyovLive">
+    <link rel="icon" href="https://files.oaiusercontent.com/file-XABsKtqfkKjAiuQaQKzEvR?se=2024-12-07T18%3A02%3A46Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D4383c876-f990-4c23-b061-8529e086c8c3.webp&sig=lJjDYx9yBiWKlkSWbHYqaHlK8YrIaQWI2/T1zD7HFaE%3D" >
+    <link rel="shortcut icon" href="https://files.oaiusercontent.com/file-XABsKtqfkKjAiuQaQKzEvR?se=2024-12-07T18%3A02%3A46Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D4383c876-f990-4c23-b061-8529e086c8c3.webp&sig=lJjDYx9yBiWKlkSWbHYqaHlK8YrIaQWI2/T1zD7HFaE%3D" type="image/x-icon">
+
+    <title>LL desing shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        .product {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .carousel {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .carousel .slide {
+            display: none;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .carousel .slide.active {
+            display: block;
+        }
+
+        .carousel .prev,
+        .carousel .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            z-index: 2;
+            font-size: 1.5rem;
+        }
+
+        .carousel .prev {
+            left: 0;
+        }
+
+        .carousel .next {
+            right: 0;
+        }
+
+        nav ul li select {
+            background-color: #333;
+            color: white;
+            border: 1px solid #fff;
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-top: 2px solid #444;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎉 Welcome to Our Shop 🎉</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">🛒 Our Services</a></li>
+                <li><a href="#how-to-buy">📩 How to Buy</a></li>
+                <li><a href="#contact">📞 Contact</a></li>
+                <li>
+                    <select id="language-selector" onchange="changeLanguage()">
+                        <option value="en">English</option>
+                        <option value="hy">Հայերեն</option>
+                        <option value="ru">Русский</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="products">
+        <h2>🛠️ What We Offer</h2>
+
+        <div class="product">
+            <div class="carousel">
+                <button class="prev" onclick="changeSlide(0, -1)">&#10094;</button>
+                <img src="images/web-siteI.png" alt="Website Example 1" class="slide active" width="100%">
+                <img src="images/web-siteII.png" class="slide" width="100%">
+                <img src="images/web-siteIII.png" class="slide" width="100%">
+                <button class="next" onclick="changeSlide(0, 1)">&#10095;</button>
+            </div>
+            <h3>🌐 Website Development</h3>
+            <p>We create modern, user-friendly, and professional websites tailored to your needs.</p>
+            <button class="buy-now" onclick="verification()">Learn More</button>
+        </div>
+
+        <div class="product">
+            <div class="carousel">
+                <button class="prev" onclick="changeSlide(1, -1)">&#10094;</button>
+                <img src="images/desinger1.png" alt="Logo Example 1" class="slide active" width="100%">
+                <img src="images/desinger2.png" alt="Logo Example 2" class="slide" width="100%">
+                <img src="images/desinger3.png" alt="Logo Example 3" class="slide" width="100%">
+                <button class="next" onclick="changeSlide(1, 1)">&#10095;</button>
+            </div>
+            <h3>🎨 Visual Design (Logos, Banners)</h3>
+            <p>High-quality logos, banners, and other visual materials to represent your brand or project.</p>
+            <button class="buy-now" onclick="verification()">Learn More</button>
+        </div>
+
+        <div class="product">
+            <div class="carousel">
+                <button class="prev" onclick="changeSlide(2, -1)">&#10094;</button>
+                <img src="images/discord1.png" alt="Discord Example 1" class="slide active" width="100%">
+                <img src="images/discord2.png" alt="Discord Example 2" class="slide" width="100%">
+                <img src="images/discord3.png" alt="Discord Example 3" class="slide" width="100%">
+                <button class="next" onclick="changeSlide(2, 1)">&#10095;</button>
+            </div>
+            <h3>🤖 Discord Server Setup</h3>
+            <p>Professional and functional Discord servers with custom roles, bots, and layout.</p>
+            <button class="buy-now" onclick="verification()">Learn More</button>
+        </div>
+    </section>
+
+    <center>
+        <section id="how-to-buy">
+            <h2>📩 How to Buy</h2>
+            <p>To use our services, please contact us through our <strong>Discord server</strong>. We will guide you through the process and answer all your questions.</p>
+            <a href="https://discord.gg/CTvVm5aWw9e" target="_blank" onclick="security()">🔗 Join Our Discord</a>
+        </section>
+    </center>
+
+    <footer id="contact">
+        <h2>📞 Contact Us</h2>
+        <p>Discord: <a href="https://discord.gg/CTvVm5aWw9e" target="_blank" onclick="security()">Join Our Server</a></p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                "welcome": "🎉 Welcome to Our Shop 🎉",
+                "services": "🛠️ What We Offer",
+                "website": "🌐 Website Development",
+                "websiteDesc": "We create modern, user-friendly, and professional websites tailored to your needs.",
+                "design": "🎨 Visual Design (Logos, Banners)",
+                "designDesc": "High-quality logos, banners, and other visual materials to represent your brand or project.",
+                "discord": "🤖 Discord Server Setup",
+                "discordDesc": "Professional and functional Discord servers with custom roles, bots, and layout.",
+                "howToBuy": "📩 How to Buy",
+                "howToBuyDesc": "To use our services, please contact us through our <strong>Discord server</strong>. We will guide you through the process and answer all your questions.",
+                "contact": "📞 Contact Us",
+                "email": "Email: shop@example.com",
+                "discordLink": "Discord: Join Our Server"
+            },
+            hy: {
+                "welcome": "🎉 Բարի գալուստ մեր խանութ 🎉",
+                "services": "🛠️ Մեր ծառայությունները",
+                "website": "🌐 Հասանելի կայքերի մշակում",
+                "websiteDesc": "Մենք ստեղծում ենք ժամանակակից, օգտագործման հարմար ու պրոֆեսիոնալ կայքեր՝ համապատասխան ձեր պահանջներին:",
+                "design": "🎨 Հագեցնող դիզայն (լոգոներ, բեներներ)",
+                "designDesc": "Բարձրորակ լոգոներ, բեներներ ու այլ տեսողական նյութեր՝ ձեր բրենդը կամ նախագիծը ներկայացնելու համար:",
+                "discord": "🤖 Discord սերվերների կարգավորում",
+                "discordDesc": "Պրոֆեսիոնալ ու ֆունկցիոնալ Discord սերվերներ՝ հարմարեցված դերերով, բոտերով և կառուցվածքով:",
+                "howToBuy": "📩 Ինչպես գնել",
+                "howToBuyDesc": "Մեր ծառայությունները օգտագործելու համար կապվեք մեզ հետ մեր <strong>Discord սերվերում</strong>։ Մենք կուղղորդենք ձեզ գործընթացում և պատասխանենք ձեր բոլոր հարցերին.",
+                "contact": "📞 Կապ մեզ հետ",
+                "email": "Էլ․ փոստ՝ shop@example.com",
+                "discordLink": "Discord: Միացեք մեր սերվերին"
+            },
+            ru: {
+                "welcome": "🎉 Добро пожаловать в наш магазин 🎉",
+                "services": "🛠️ Наши услуги",
+                "website": "🌐 Разработка сайтов",
+                "websiteDesc": "Мы создаем современные, удобные и профессиональные сайты, соответствующие вашим требованиям.",
+                "design": "🎨 Визуальный дизайн (логотипы, баннеры)",
+                "designDesc": "Качественные логотипы, баннеры и другие визуальные материалы для представления вашего бренда или проекта.",
+                "discord": "🤖 Настройка Discord серверов",
+                "discordDesc": "Профессиональные и функциональные серверы Discord с индивидуальными ролями, ботами и макетом.",
+                "howToBuy": "📩 Как купить",
+                "howToBuyDesc": "Чтобы воспользоваться нашими услугами, свяжитесь с нами через наш <strong>Discord сервер</strong>. Мы поможем вам в процессе и ответим на все вопросы.",
+                "contact": "📞 Свяжитесь с нами",
+                "email": "Электронная почта: shop@example.com",
+                "discordLink": "Discord: Присоединитесь к нашему серверу"
+            }
+        };
+
+        function changeLanguage() {
+            const language = document.getElementById("language-selector").value;
+            document.querySelector("h1").innerHTML = translations[language].welcome;
+            document.querySelector("#products h2").innerHTML = translations[language].services;
+            document.querySelectorAll(".product h3")[0].innerHTML = translations[language].website;
+            document.querySelectorAll(".product p")[0].innerHTML = translations[language].websiteDesc;
+            document.querySelectorAll(".product h3")[1].innerHTML = translations[language].design;
+            document.querySelectorAll(".product p")[1].innerHTML = translations[language].designDesc;
+            document.querySelectorAll(".product h3")[2].innerHTML = translations[language].discord;
+            document.querySelectorAll(".product p")[2].innerHTML = translations[language].discordDesc;
+            document.querySelector("#how-to-buy h2").innerHTML = translations[language].howToBuy;
+            document.querySelector("#how-to-buy p").innerHTML = translations[language].howToBuyDesc;
+            document.querySelector("#contact h2").innerHTML = translations[language].contact;
+            document.querySelector("#contact p").innerHTML = translations[language].email;
+            document.querySelector("#contact p a").innerHTML = translations[language].discordLink;
+        }
+
+        const carousels = document.querySelectorAll('.carousel');
+
+function changeSlide(carouselIndex, direction) {
+    const slides = carousels[carouselIndex].querySelectorAll('.slide');
+    const activeSlide = carousels[carouselIndex].querySelector('.slide.active');
+    let activeIndex = Array.from(slides).indexOf(activeSlide);
+
+    slides[activeIndex].classList.remove('active');
+    activeIndex = (activeIndex + direction + slides.length) % slides.length;
+    slides[activeIndex].classList.add('active');
+}
+let securitylet = false
+        function security() {
+    securitylet = true
+}
+
+function verification() {
+    if (securitylet === true) {
+        open("info.html" )
+    } else{
+        alert("To see info , please contact us via our Discord server. Thank you!");
+    }
+} 
+    </script>
+</body>
+</html>
